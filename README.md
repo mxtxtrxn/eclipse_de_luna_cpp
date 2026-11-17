@@ -155,6 +155,18 @@ El arnés no requiere dependencias externas. Cubre:
 
 Resultado esperado: **119/119 casos aprobados** (472 aserciones).
 
+## Estado del proyecto
+
+- **1.604 líneas efectivas de producción** en `include/` y `src/`; 1.275 en
+  `tests/` (3.013 líneas no vacías en total).
+- **119 casos de prueba** con 472 aserciones y 0 advertencias al compilar con
+  `-Wall -Wextra -Wpedantic`.
+- Cuatro programas: `generar_datos`, `limpieza`, `forecasting` y `reporte`.
+- Sin dependencias externas; compila con CMake 3.16+ o Make.
+- Salidas reproducibles byte a byte con las semillas 42 (leads) y 7 (serie FX).
+- El repositorio no versiona `build/`, `bin/`, binarios, paquetes ni archivos
+  temporales; esas exclusiones están en `.gitignore`.
+
 ## Parte 1 — Limpieza de datos
 
 El programa `limpieza` aplica las mismas reglas que el notebook original:
