@@ -167,7 +167,7 @@ Resultado esperado: **119/119 casos aprobados** (472 aserciones).
 - El repositorio no versiona `build/`, `bin/`, binarios, paquetes ni archivos
   temporales; esas exclusiones están en `.gitignore`.
 
-## Parte 1 — Limpieza de datos
+## Parte 1: Limpieza de datos
 
 El programa `limpieza` aplica las mismas reglas que el notebook original:
 
@@ -183,7 +183,7 @@ El programa `limpieza` aplica las mismas reglas que el notebook original:
 Resultado: de 5,250 filas sucias a 5,000 filas limpias (250 duplicados
 intencionales, 5% del total).
 
-## Parte 2 — Pronóstico MXN/EUR
+## Parte 2: Pronóstico MXN/EUR
 
 ### Por qué EUR es distinto de USD
 
@@ -205,7 +205,7 @@ señala como relevante.
 Los datos siguen siendo **sintéticos y reproducibles** (semillas fijas). No son
 series reales de Banxico ni del BCE.
 
-### ARIMA(1,1,1) — Hannan-Rissanen
+### ARIMA(1,1,1): Hannan-Rissanen
 
 `statsmodels` ajusta ARIMA por máxima verosimilitud con filtro de Kalman.
 Reimplementar eso desde cero no se justifica para una serie mensual de ~130
