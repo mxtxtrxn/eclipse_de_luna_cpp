@@ -3,7 +3,7 @@ CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra -Wpedantic -fno-ident
 CPPFLAGS ?= -Iinclude
 
 BIN_DIR := bin
-APPS := $(BIN_DIR)/generar_datos $(BIN_DIR)/limpieza $(BIN_DIR)/forecasting
+APPS := $(BIN_DIR)/generar_datos $(BIN_DIR)/limpieza $(BIN_DIR)/forecasting $(BIN_DIR)/reporte
 TEST_SRCS := $(wildcard tests/test_*.cpp)
 TEST_BIN := $(BIN_DIR)/eclipse_tests
 HEADERS := $(wildcard include/*.hpp)
@@ -26,6 +26,7 @@ run: all
 	./$(BIN_DIR)/generar_datos
 	./$(BIN_DIR)/limpieza
 	./$(BIN_DIR)/forecasting
+	./$(BIN_DIR)/reporte
 
 test: $(TEST_BIN)
 	./$(TEST_BIN)

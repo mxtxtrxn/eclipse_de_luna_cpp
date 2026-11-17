@@ -14,7 +14,7 @@ endif()
 add_library(eclipse_common INTERFACE)
 target_include_directories(eclipse_common INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-set(ECLIPSE_PROGRAMS generar_datos limpieza forecasting)
+set(ECLIPSE_PROGRAMS generar_datos limpieza forecasting reporte)
 foreach(programa IN LISTS ECLIPSE_PROGRAMS)
     add_executable(${programa} src/${programa}.cpp)
     target_link_libraries(${programa} PRIVATE eclipse_common)
@@ -38,6 +38,7 @@ if(ECLIPSE_BUILD_TESTS)
         tests/test_cleaning.cpp
         tests/test_fx_series.cpp
         tests/test_data_generator.cpp
+        tests/test_reporting.cpp
         tests/test_integration.cpp
     )
     target_include_directories(eclipse_tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/tests)
