@@ -1,4 +1,4 @@
-# Proyecto Eclipse de Luna — Versión C++ (MXN/EUR)
+# Proyecto Eclipse de Luna  [Proyecto en C++] (MXN/EUR)
 
 Reescritura en C++17 de un proyecto de análisis en Python. El caso de negocio
 combina dos tareas: limpieza de una tabla legada de leads y pronóstico del tipo
